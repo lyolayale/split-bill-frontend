@@ -6,7 +6,7 @@ export default function Home() {
         <span className="text-blue-800">when you can have awkard stares?</span>
       </h1>
       <div className="text">
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-xl">
           Split the bill! Oversee your financial friendship.
         </p>
       </div>
