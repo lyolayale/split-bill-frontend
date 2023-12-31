@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Header, Footer } from "./components";
-import { FormAddFriend, FormSplitBill, FriendsList } from "./pages";
+import { FormAddFriend, FriendsList, Home } from "./pages";
 import mockFriends from "./mockFriends";
 
 export default function App() {
@@ -9,6 +9,7 @@ export default function App() {
   return (
     <div className="body-wrapper">
       <Header />
+      <Home />
       <FormAddFriend />
       <FriendsList />
       <Footer />
