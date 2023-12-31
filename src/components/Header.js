@@ -7,7 +7,7 @@ export default function Header() {
       <nav className="p-4 bg-gray-300">
         <ul className="flex justify-start items-center gap-2">
           <li>
-            <PiScrollFill color="darkblue" size={40} />
+            <PiScrollFill className="text-blue-800" size={40} />
           </li>
           <li className="font-hero relative">
             Bill Splitter{" "}
