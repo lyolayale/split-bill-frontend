@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export default function Home() {
   return (
     <section className="mt-52 h-screen max-w-lg mx-auto flex flex-col justify-start items-center gap-5 p-5">
@@ -10,9 +12,11 @@ export default function Home() {
           Split the bill! Oversee your financial friendship.
         </p>
       </div>
-      <button className="mt-10 uppercase w-[10rem] p-2 rounded-lg bg-blue-800 text-white shadow-md shadow-gray-500 hover:shadow-none duration-200">
-        Get Started
-      </button>
+      <NavLink to="/friendlist">
+        <button className="mt-10 uppercase w-[10rem] p-2 rounded-lg bg-blue-800 text-white shadow-md shadow-gray-500 hover:shadow-none duration-200">
+          Get Started
+        </button>
+      </NavLink>
     </section>
   );
 }
