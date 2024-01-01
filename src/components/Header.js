@@ -9,7 +9,7 @@ export default function Header() {
           <li>
             <PiScrollFill className="text-blue-800" size={40} />
           </li>
-          <li className="font-hero relative">
+          <li className="font-hero relative text-blue-800 font-extrabold">
             Bill Splitter{" "}
             <span>
               <FaMoneyBillAlt className="inline absolute top-0 text-green-800" />

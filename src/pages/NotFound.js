@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export default function NotFound() {
   return (
     <section className=" h-screen w-max-screen-lg bg-slate-900 flex flex-col justify-center items-center gap-20">
@@ -9,9 +11,11 @@ export default function NotFound() {
           page not found
         </p>
       </div>
-      <button className="w-36 p-2 text-orange-600 uppercase bg-transparent border border-orange-600 shadow-lg shadow-orange-600 hover:shadow-none duration-200">
-        Go Home
-      </button>
+      <NavLink to="/">
+        <button className="w-36 p-2 text-orange-600 uppercase bg-transparent border border-orange-600 shadow-lg shadow-orange-600 hover:shadow-none duration-200">
+          Go Home
+        </button>
+      </NavLink>
     </section>
   );
 }
