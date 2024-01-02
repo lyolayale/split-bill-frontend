@@ -14,7 +14,7 @@ export default function FriendsList({
 }) {
   const [settleDebt, setSettleDebt] = useState(false);
   const currentFriend = friends?.find(
-    friend => friend.id === selectedFriend?.id
+    friend => friend?.id === selectedFriend?.id
   );
 
   const navigate = useNavigate();

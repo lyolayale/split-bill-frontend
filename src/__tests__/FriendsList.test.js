@@ -1,12 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import FriendsList from "../pages/FriendsList";
 import { BrowserRouter } from "react-router-dom";
+import mockFriends from "../mockFriends";
 
 describe("<FriendsList/>", () => {
   function friendsList() {
     return render(
       <BrowserRouter>
-        <FriendsList />
+        <FriendsList friends={mockFriends} />
       </BrowserRouter>
     );
   }
@@ -24,5 +25,18 @@ describe("<FriendsList/>", () => {
   it("contains a text with 'exit', representing return to home screen", () => {
     friendsList();
     expect(screen.getByText(/exit/i)).toBeInTheDocument();
+  });
+  it("contains all friend attributes", () => {
+    friendsList();
+    mockFriends.map(friend => {
+      const obj = {
+        one: expect(screen.getByText(friend.name)).toBeInTheDocument(),
+        two: expect(screen.getByText(friend.event)).toBeInTheDocument(),
+        three: expect(
+          screen.getByText(`$${friend.balance}`)
+        ).toBeInTheDocument(),
+      };
+      return obj;
+    });
   });
 });
