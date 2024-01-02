@@ -42,6 +42,7 @@ export default function FormAddFriend({ onAddNewFriend }) {
             Transaction Name <span className="text-red-700">*</span>
           </label>
           <input
+            title="transaction"
             onChange={e => setTransaction(e.target.value)}
             value={transaction}
             className="p-2 border border-gray-300 border-1 rounded-md hover:shadow-md hover:shadow-gray-500 w-full focus:outline-none focus:scale-105 focus:shadow-md focus:shadow-gray-500"
@@ -56,6 +57,7 @@ export default function FormAddFriend({ onAddNewFriend }) {
             Friend's Name <span className="text-red-700">*</span>
           </label>
           <input
+            title="name"
             onChange={e => setName(e.target.value)}
             value={name}
             className="p-2 border border-gray-300 border-1 rounded-md hover:shadow-md hover:shadow-gray-500 w-full focus:outline-none focus:scale-105 focus:shadow-md focus:shadow-gray-500"
@@ -70,6 +72,7 @@ export default function FormAddFriend({ onAddNewFriend }) {
             Amount <span className="text-red-700">*</span>
           </label>
           <input
+            title="amount"
             onChange={e => setAmount(Number(e.target.value))}
             value={amount}
             className="p-2 border border-gray-300 border-1 rounded-md hover:shadow-md hover:shadow-gray-500 w-full focus:outline-none focus:scale-105 focus:shadow-md focus:shadow-gray-500"
@@ -85,6 +88,7 @@ export default function FormAddFriend({ onAddNewFriend }) {
             Your Half <span className="text-red-700">*</span>
           </label>
           <input
+            title="your half"
             onChange={e =>
               setUserAmount(
                 Number(e.target.value) > amount
@@ -105,6 +109,7 @@ export default function FormAddFriend({ onAddNewFriend }) {
             Friend's Half <span className="text-red-700">*</span>
           </label>
           <input
+            title="friends half"
             value={friendsAmount}
             className="p-2 border border-gray-300 border-1 rounded-md hover:shadow-md hover:shadow-gray-500 w-full focus:outline-none focus:scale-105 focus:shadow-md focus:shadow-gray-500"
             type="number"
@@ -118,6 +123,7 @@ export default function FormAddFriend({ onAddNewFriend }) {
             Paid by <span className="text-red-700">*</span>
           </label>
           <select
+            title="paid by"
             onChange={e => setWhoPaid(e.target.value)}
             value={whoPaid}
             className="p-2 border border-gray-300 border-1 rounded-md hover:shadow-md hover:shadow-gray-500 w-full focus:outline-none focus:scale-105 focus:shadow-md focus:shadow-gray-500"

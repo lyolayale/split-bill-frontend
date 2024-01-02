@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FaRegHandshake } from "react-icons/fa";
 
 export default function Friend({
@@ -21,15 +21,18 @@ export default function Friend({
   }
 
   return (
-    <section className="w-[75%] min-w-[20rem] rounded-md max-w-screen-lg p-6 bg-gray-200  shadow-lg shadow-gray-500 hover:shadow-none hover:border hover:border-1 hover:border-gray-600 duration-200 flex justify-between items-center">
+    <section
+      title="friend"
+      className="w-[75%] min-w-[20rem] rounded-md max-w-screen-lg p-6 bg-gray-200  shadow-lg shadow-gray-500 hover:shadow-none hover:border hover:border-1 hover:border-gray-600 duration-200 flex justify-between items-center"
+    >
       <div className="left-side flex flex-col justify-center items-start w-40">
         <p
           onClick={() => handleClick(friend)}
           className="text-blue-800 font-bold underline uppercase cursor-pointer hover:opacity-60 duration-200"
         >
-          {friend.event}
+          {friend?.event}
         </p>
-        <p>{friend.name}</p>
+        <p>{friend?.name}</p>
       </div>
       <button
         onClick={() => handleDebt(friend)}
@@ -40,22 +43,22 @@ export default function Friend({
       </button>
 
       <div className="right-side w-40 text-right">
-        {friend.balance > 0 && (
+        {friend?.balance > 0 && (
           <>
             <p className="underline">Owes you:</p>
-            <p className="text-green-700">${friend.balance}</p>
+            <p className="text-green-700">${friend?.balance}</p>
           </>
         )}
-        {friend.balance < 0 && (
+        {friend?.balance < 0 && (
           <>
             <p className="underline">You owe:</p>
-            <p className="text-red-700">${friend.balance}</p>
+            <p className="text-red-700">${friend?.balance}</p>
           </>
         )}
-        {friend.balance === 0 && (
+        {friend?.balance === 0 && (
           <>
             <p className="underline">Are even:</p>
-            <p className="text-black">${friend.balance}</p>
+            <p className="text-black">${friend?.balance}</p>
           </>
         )}
       </div>

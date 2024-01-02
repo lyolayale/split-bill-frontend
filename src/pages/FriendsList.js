@@ -13,7 +13,7 @@ export default function FriendsList({
   onDeleteFriend,
 }) {
   const [settleDebt, setSettleDebt] = useState(false);
-  const currentFriend = friends.find(
+  const currentFriend = friends?.find(
     friend => friend.id === selectedFriend?.id
   );
 
@@ -65,7 +65,7 @@ export default function FriendsList({
       </nav>
 
       <ul className="my-20 flex flex-col justify-center items-center gap-10">
-        {friends.map(friend => (
+        {friends?.map(friend => (
           <Friend
             key={friend.id}
             friend={friend}
