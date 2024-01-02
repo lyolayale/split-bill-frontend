@@ -12,7 +12,7 @@ describe("<Home/>", () => {
       </BrowserRouter>
     );
   }
-  it("renders without error", () => {
+  it("renders without errors", () => {
     home();
   });
   it("contains a heading", () => {

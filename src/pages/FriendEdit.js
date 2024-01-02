@@ -21,8 +21,8 @@ export default function FriendEdit({ friends, selectedFriend, onEditFriend }) {
       >
         <div className="flex justify-between items-center w-full">
           <h2 className="text-3xl">
-            Edit {selectedFriend.event} with{" "}
-            <span className="text-black">{selectedFriend.name}</span>{" "}
+            Edit {selectedFriend?.event} with{" "}
+            <span className="text-black">{selectedFriend?.name}</span>{" "}
           </h2>
           <NavLink to="/friendlist">
             <p className="inline px-3 py-2 text-gray-200 text-xl bg-gray-600 rounded-full cursor-pointer shadow-lg shadow-slate-500 hover:shadow-none duration-200 hover:text-black">
@@ -39,9 +39,9 @@ export default function FriendEdit({ friends, selectedFriend, onEditFriend }) {
             value={transaction}
             className="p-2 border border-gray-300 border-1 rounded-md hover:shadow-md hover:shadow-gray-500 w-full focus:outline-none focus:scale-105 focus:shadow-md focus:shadow-gray-500"
             type="text"
-            placeholder={selectedFriend.event}
+            placeholder={selectedFriend?.event}
           /> */}
-          <p className="text-lg text-black">{selectedFriend.event}</p>
+          <p className="text-lg text-black">{selectedFriend?.event}</p>
         </div>
 
         <div className="w-full">
@@ -53,9 +53,9 @@ export default function FriendEdit({ friends, selectedFriend, onEditFriend }) {
             value={name}
             className="p-2 border border-gray-300 border-1 rounded-md hover:shadow-md hover:shadow-gray-500 w-full focus:outline-none focus:scale-105 focus:shadow-md focus:shadow-gray-500"
             type="text"
-            placeholder={selectedFriend.name}
+            placeholder={selectedFriend?.name}
           /> */}
-          <p className="text-lg text-black">{selectedFriend.name}</p>
+          <p className="text-lg text-black">{selectedFriend?.name}</p>
         </div>
 
         <div className="w-full">
@@ -67,14 +67,14 @@ export default function FriendEdit({ friends, selectedFriend, onEditFriend }) {
             value={amount}
             className="block text-lg text-black p-2 border border-gray-300 border-1 rounded-md hover:shadow-md hover:shadow-gray-500 w-20 focus:outline-none focus:scale-105 focus:shadow-md focus:shadow-gray-500"
             type="number"
-            placeholder={`$${selectedFriend.balance}`}
+            placeholder={`$${selectedFriend?.balance}`}
           />
         </div>
         <label className="underline text-lg">
           New Balance <span className="text-red-700">*</span>
         </label>
         <p className="text-lg text-black p-2 border border-gray-300 border-1 rounded-md hover:shadow-md hover:shadow-gray-500 w-20 focus:outline-none focus:scale-105 focus:shadow-md focus:shadow-gray-500">
-          {selectedFriend.balance + amount}
+          {selectedFriend?.balance + amount}
         </p>
 
         <button className="ml-auto px-2 py-3 bg-gray-600 text-white uppercase rounded-lg hover:scale-105  duration-200">
