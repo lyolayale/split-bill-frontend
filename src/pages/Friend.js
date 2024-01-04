@@ -22,7 +22,7 @@ export default function Friend({
 
   return (
     <section
-      title="friend"
+      title="Friend"
       className="w-[75%] min-w-[20rem] rounded-md max-w-screen-lg p-6 bg-gray-200  shadow-lg shadow-gray-500 hover:shadow-none hover:border hover:border-1 hover:border-gray-600 duration-200 flex justify-between items-center"
     >
       <div className="left-side flex flex-col justify-center items-start w-40">

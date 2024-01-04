@@ -3,7 +3,6 @@ import { Header, Footer } from "./components";
 import {
   FormAddFriend,
   FriendsList,
-  FriendShow,
   FriendEdit,
   Home,
   NotFound,
@@ -25,7 +24,7 @@ export default function App() {
   }
 
   function handleSelectedFriend(friend) {
-    setSelectedFriend(curr => (curr?.id === friend?.id ? null : friend));
+    setSelectedFriend(curr => (curr?.id === friend?.id ? friend : friend));
   }
 
   function handleDeleteFriend(id) {
@@ -73,7 +72,7 @@ export default function App() {
                 friends={friends}
                 selectedFriend={selectedFriend}
                 onEditFriend={handleEditFriend}
-                key={selectedFriend.id}
+                key={selectedFriend?.id}
               />
             }
           />
