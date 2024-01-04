@@ -131,7 +131,7 @@ export default function FormAddFriend({ onAddNewFriend }) {
           >
             <option value="">Select</option>
             <option value="user">You</option>
-            <option value="friend">Friend</option>
+            <option value="friend">{name}</option>
           </select>
         </div>
 
