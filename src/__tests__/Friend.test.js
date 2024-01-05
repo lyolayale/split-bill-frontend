@@ -12,7 +12,7 @@ describe("<Friend/>", () => {
   }
   it("render the <section title='friend'>", () => {
     friend();
-    expect(screen.getByTitle("friend")).toBeInTheDocument();
+    expect(screen.getByTitle("Friend")).toBeInTheDocument();
   });
   it("render a 'settle debt' button", () => {
     friend();
