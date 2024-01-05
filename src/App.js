@@ -41,6 +41,10 @@ export default function App() {
     );
   }
 
+  function handleClearAllDebt() {
+    setFriends([]);
+  }
+
   return (
     <div className="body-wrapper bg-[whitesmoke]">
       <Header />
@@ -56,6 +60,7 @@ export default function App() {
               selectedFriend={selectedFriend}
               onSelectedFriend={handleSelectedFriend}
               onDeleteFriend={handleDeleteFriend}
+              onClearAllDebt={handleClearAllDebt}
             />
           }
         />
