@@ -26,6 +26,14 @@ describe("<FriendsList/>", () => {
     friendsList();
     expect(screen.getByText(/exit/i)).toBeInTheDocument();
   });
+  it("contain a 'clear all debt' button", () => {
+    friendsList();
+    expect(
+      screen.getByRole("button", {
+        name: /clear all debt/i,
+      })
+    ).toBeInTheDocument();
+  });
   it("contains all friend attributes", () => {
     friendsList();
     mockFriends.map(friend => {
@@ -38,5 +46,7 @@ describe("<FriendsList/>", () => {
       };
       return obj;
     });
+    // eslint-disable-next-line testing-library/no-debugging-utils
+    screen.logTestingPlaygroundURL();
   });
 });

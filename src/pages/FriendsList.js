@@ -65,12 +65,12 @@ export default function FriendsList({
         </ul>
       </nav>
       <section className="text-center w-[50%] mx-auto" id="clear-all-debt">
-        <p
+        <button
           onClick={onClearAllDebt}
           className="w-full d-block mx-auto text-gray-200 text-2xl bg-green-800 pt-1 pb-2 px-4 rounded-full cursor-pointer shadow-lg shadow-slate-500 hover:shadow-none hover:text-black duration-200"
         >
           Clear All Debt
-        </p>
+        </button>
       </section>
 
       <ul className="my-20 flex flex-col justify-center items-center gap-10">
