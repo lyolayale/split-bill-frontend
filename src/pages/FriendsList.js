@@ -11,6 +11,7 @@ export default function FriendsList({
   selectedFriend,
   onSelectedFriend,
   onDeleteFriend,
+  onClearAllDebt,
 }) {
   const [settleDebt, setSettleDebt] = useState(false);
   const currentFriend = friends?.find(
@@ -43,7 +44,7 @@ export default function FriendsList({
           <li>
             <div
               onClick={onAddFriend}
-              className="flex justify-center items-center gap-10"
+              className="w-full flex justify-center items-center gap-10"
             >
               <NavLink to="/friendnew">
                 <p className="text-gray-200 text-4xl bg-gray-600 pt-1 pb-2 px-4 rounded-full cursor-pointer shadow-lg shadow-slate-500 hover:shadow-none duration-200 hover:text-black hover:border hover:border-1 hover:border-gray-600">
@@ -63,6 +64,14 @@ export default function FriendsList({
           </li>
         </ul>
       </nav>
+      <section className="text-center w-[50%] mx-auto" id="clear-all-debt">
+        <p
+          onClick={onClearAllDebt}
+          className="w-full d-block mx-auto text-gray-200 text-2xl bg-green-800 pt-1 pb-2 px-4 rounded-full cursor-pointer shadow-lg shadow-slate-500 hover:shadow-none hover:text-black duration-200"
+        >
+          Clear All Debt
+        </p>
+      </section>
 
       <ul className="my-20 flex flex-col justify-center items-center gap-10">
         {friends?.map(friend => (
