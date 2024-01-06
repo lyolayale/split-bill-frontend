@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { LuClipboardSignature } from "react-icons/lu";
 import SettleDebt from "./SettleDebt";
+import ClearAllDebt from "./ClearAllDebt";
 import Friend from "./Friend";
 
 export default function FriendsList({
@@ -12,8 +13,12 @@ export default function FriendsList({
   onSelectedFriend,
   onDeleteFriend,
   onClearAllDebt,
+  clearAllDebt,
+  handleClearAllDebtFalse,
+  handleClearAllDebtTrue,
 }) {
   const [settleDebt, setSettleDebt] = useState(false);
+
   const currentFriend = friends?.find(
     friend => friend?.id === selectedFriend?.id
   );
@@ -31,6 +36,7 @@ export default function FriendsList({
     onDeleteFriend(friend);
     setSettleDebt(false);
   }
+
   return (
     <section className="relative h-screen max-w-screen-lg mx-auto">
       <nav className="m-3 p-5 bg-slate-200 rounded-md z-0">
@@ -66,7 +72,7 @@ export default function FriendsList({
       </nav>
       <section className="text-center w-[50%] mx-auto" id="clear-all-debt">
         <button
-          onClick={onClearAllDebt}
+          onClick={handleClearAllDebtTrue}
           className="w-full d-block mx-auto text-gray-200 text-2xl bg-green-800 pt-1 pb-2 px-4 rounded-full cursor-pointer shadow-lg shadow-slate-500 hover:shadow-none hover:text-black duration-200"
         >
           Clear All Debt
@@ -93,6 +99,12 @@ export default function FriendsList({
         />
       ) : (
         ""
+      )}
+      {clearAllDebt && (
+        <ClearAllDebt
+          onClearAllDebt={onClearAllDebt}
+          handleClearAllDebtFalse={handleClearAllDebtFalse}
+        />
       )}
     </section>
   );

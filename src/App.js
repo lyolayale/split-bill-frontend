@@ -14,6 +14,7 @@ export default function App() {
   const [friends, setFriends] = useState(mockFriends);
   const [isAddFriend, setIsAddFriend] = useState(false);
   const [selectedFriend, setSelectedFriend] = useState(null);
+  const [clearAllDebt, setClearAllDebt] = useState(false);
 
   function handleIsAddFriendTrue() {
     setIsAddFriend(prev => !prev);
@@ -43,6 +44,14 @@ export default function App() {
 
   function handleClearAllDebt() {
     setFriends([]);
+    setClearAllDebt(false);
+  }
+
+  function handleClearAllDebtTrue() {
+    setClearAllDebt(true);
+  }
+  function handleClearAllDebtFalse() {
+    setClearAllDebt(false);
   }
 
   return (
@@ -61,6 +70,9 @@ export default function App() {
               onSelectedFriend={handleSelectedFriend}
               onDeleteFriend={handleDeleteFriend}
               onClearAllDebt={handleClearAllDebt}
+              clearAllDebt={clearAllDebt}
+              handleClearAllDebtFalse={handleClearAllDebtFalse}
+              handleClearAllDebtTrue={handleClearAllDebtTrue}
             />
           }
         />
