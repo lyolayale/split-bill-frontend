@@ -20,7 +20,7 @@ describe("<FriendsList/>", () => {
   });
   it("contains a text with '+', representing adding event", () => {
     friendsList();
-    expect(screen.getByText(/\+/i)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /\+/i })).toBeInTheDocument();
   });
   it("contains a text with 'exit', representing return to home screen", () => {
     friendsList();
@@ -46,7 +46,13 @@ describe("<FriendsList/>", () => {
       };
       return obj;
     });
-    // eslint-disable-next-line testing-library/no-debugging-utils
-    screen.logTestingPlaygroundURL();
+  });
+  it("contains a '+' representing positive balance", () => {
+    friendsList();
+    expect(screen.getByRole("heading", { name: /\+\W/i })).toBeInTheDocument();
+  });
+  it("contains a '-' representing negative balance", () => {
+    friendsList();
+    expect(screen.getByRole("heading", { name: /\-\W/i })).toBeInTheDocument();
   });
 });

@@ -1,45 +1,45 @@
 import { render, screen } from "@testing-library/react";
-import SettleDebt from "../pages/SettleDebt";
+import ClearAllDebt from "../pages/ClearAllDebt";
 import { BrowserRouter } from "react-router-dom";
 
-describe("<SettleDebt/>", () => {
-  function settleDebt() {
+describe("<ClearAllDebt/>", () => {
+  function clearDebt() {
     return render(
       <BrowserRouter>
-        <SettleDebt />
+        <ClearAllDebt />
       </BrowserRouter>
     );
   }
   it("renders without errors", () => {
-    settleDebt();
+    clearDebt();
   });
-  it("contains a h2 heading, 'settle debt with ?'", () => {
-    settleDebt();
+  it("contains a h2 heading, 'clear all debt?'", () => {
+    clearDebt();
     expect(
-      screen.getByRole("heading", { name: /settle debt with \?/i })
+      screen.getByRole("heading", { name: /clear all debt\?/i })
     ).toBeInTheDocument();
   });
   it("contains text below h2 heading", () => {
-    settleDebt();
+    clearDebt();
     expect(
       screen.getByText(
-        /by clicking the settle debt button below, will permanently delete transaction: with \./i
+        /by clicking the clear all debt button below, will permanently delete all debt!/i
       )
     ).toBeInTheDocument();
   });
   it("contains a button 'not now'", () => {
-    settleDebt();
+    clearDebt();
     expect(
       screen.getByRole("button", {
         name: /not now/i,
       })
     ).toBeInTheDocument();
   });
-  it("contains a button 'settle debt'", () => {
-    settleDebt();
+  it("contains a button 'clear all debt'", () => {
+    clearDebt();
     expect(
       screen.getByRole("button", {
-        name: /settle debt/i,
+        name: /clear all debt/i,
       })
     ).toBeInTheDocument();
   });
