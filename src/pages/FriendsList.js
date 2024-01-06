@@ -16,6 +16,8 @@ export default function FriendsList({
   clearAllDebt,
   handleClearAllDebtFalse,
   handleClearAllDebtTrue,
+  positiveDebt,
+  negativeDebt,
 }) {
   const [settleDebt, setSettleDebt] = useState(false);
 
@@ -42,10 +44,23 @@ export default function FriendsList({
       <nav className="m-3 p-5 bg-slate-200 rounded-md z-0">
         <ul className="flex justify-between items-center">
           <li>
-            <p className="inline text-black text-3xl font-bold">
-              Activity Board{" "}
-              <LuClipboardSignature className="inline text-blue-800" />
-            </p>
+            <div>
+              <p className="inline text-black text-3xl font-bold">
+                Activity Board{" "}
+                <LuClipboardSignature className="inline text-blue-800" />
+              </p>
+            </div>
+            <div className="balance">
+              <h4 className="align-baseline">
+                {" "}
+                <span className="text-green-800 text-3xl">+</span>:{" "}
+                {positiveDebt}
+              </h4>
+              <h4>
+                {" "}
+                <span className="text-red-800 text-4xl">-</span>: {negativeDebt}
+              </h4>
+            </div>
           </li>
           <li>
             <div

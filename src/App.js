@@ -15,6 +15,8 @@ export default function App() {
   const [isAddFriend, setIsAddFriend] = useState(false);
   const [selectedFriend, setSelectedFriend] = useState(null);
   const [clearAllDebt, setClearAllDebt] = useState(false);
+  const positiveDebt = allDebt().positive;
+  const negativeDebt = allDebt().negative;
 
   function handleIsAddFriendTrue() {
     setIsAddFriend(prev => !prev);
@@ -54,6 +56,30 @@ export default function App() {
     setClearAllDebt(false);
   }
 
+  function allDebt() {
+    let totalPostitiveDebt;
+    let totalNegativeDebt;
+    const positiveDebt = [];
+    const negativeDebt = [];
+    const totalBalance = friends.map(friend => friend.balance);
+    totalBalance.forEach(num =>
+      num < 0 ? negativeDebt?.push(num) : positiveDebt?.push(num)
+    );
+    positiveDebt.length > 0
+      ? (totalPostitiveDebt = positiveDebt.reduce((curr, acc) => curr + acc))
+      : (totalPostitiveDebt = 0);
+    negativeDebt.length > 0
+      ? (totalNegativeDebt = negativeDebt.reduce((curr, acc) => curr + acc))
+      : (totalNegativeDebt = 0);
+
+    const allDebt = {
+      positive: totalPostitiveDebt,
+      negative: totalNegativeDebt,
+    };
+    return allDebt;
+  }
+  allDebt();
+
   return (
     <div className="body-wrapper bg-[whitesmoke]">
       <Header />
@@ -73,6 +99,8 @@ export default function App() {
               clearAllDebt={clearAllDebt}
               handleClearAllDebtFalse={handleClearAllDebtFalse}
               handleClearAllDebtTrue={handleClearAllDebtTrue}
+              positiveDebt={positiveDebt}
+              negativeDebt={negativeDebt}
             />
           }
         />
