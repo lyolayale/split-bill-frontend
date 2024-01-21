@@ -1,5 +1,3 @@
-import { ClearAllDebt } from ".";
-
 export default function onClearAllDebt({
   onClearAllDebt,
   handleClearAllDebtFalse,

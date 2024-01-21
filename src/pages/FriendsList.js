@@ -73,7 +73,7 @@ export default function FriendsList({
                 </p>
               </NavLink>
 
-              <NavLink to="/">
+              <NavLink to="/split-bill-frontend">
                 <p
                   onClick={onRemoveFriend}
                   className="text-gray-200 text-2xl bg-red-800 pt-1 pb-2 px-4 rounded-full cursor-pointer shadow-lg shadow-slate-500 hover:shadow-none hover:text-black hover:border hover:border-1 hover:border-gray-600 duration-200"
