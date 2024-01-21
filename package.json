@@ -1,5 +1,5 @@
 {
-  "homepage": "https://lyolayale.github.io/split-bill-frontend",
+  
   "name": "split-bill-frontend",
   "version": "0.1.0",
   "private": true,
@@ -16,6 +16,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://lyolayale.github.io/split-bill-frontend",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

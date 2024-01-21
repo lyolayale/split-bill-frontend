@@ -84,7 +84,7 @@ export default function App() {
     <div className="body-wrapper bg-[whitesmoke]">
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/split-bill-frontend" element={<Home />} />
         <Route
           path="/friendlist"
           element={
