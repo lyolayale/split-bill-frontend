@@ -5,7 +5,7 @@ export default function Home() {
     <section className="mt-52 h-screen max-w-lg mx-auto flex flex-col justify-start items-center gap-5 p-5">
       <h1 className="text-4xl leading-normal">
         Who needs good karma,{" "}
-        <span className="text-blue-800">when you can have awkard stares?</span>
+        <span className="text-blue-800">when you can have awkward stares?</span>
       </h1>
       <div className="text">
         <p className="text-gray-600 text-xl">
