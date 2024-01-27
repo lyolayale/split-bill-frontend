@@ -18,7 +18,7 @@ describe("<Home/>", () => {
   it("contains a heading", () => {
     home();
     const heading = screen.getByRole("heading", {
-      name: /who needs good karma, when you can have awkard stares/i,
+      name: /who needs good karma, when you can have awkward stares/i,
     });
     expect(heading).toBeInTheDocument();
   });
