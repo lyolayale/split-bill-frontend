@@ -40,7 +40,7 @@ export default function FriendsList({
   }
 
   return (
-    <section className="relative h-screen max-w-screen-lg mx-auto mt-12">
+    <section className="relative max-w-screen-lg mx-auto mt-12">
       <nav className="m-3 mb-12 p-5 bg-slate-200 rounded-md z-0 shadow-lg shadow-black">
         <ul className="flex justify-between items-center">
           <li>
