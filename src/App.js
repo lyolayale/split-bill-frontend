@@ -81,7 +81,7 @@ export default function App() {
   allDebt();
 
   return (
-    <div className="body-wrapper bg-[whitesmoke]">
+    <div className="body-wrapper">
       <Header />
       <Routes>
         <Route path="/split-bill-frontend" element={<Home />} />
