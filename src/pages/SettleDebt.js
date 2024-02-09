@@ -5,7 +5,7 @@ export default function SettleDebt({
   currentFriend,
 }) {
   return (
-    <section className="absolute text-black bg-white top-52 left-5 w-[95%] max-w-screen-lg h-[30%] rounded shadow-2xl shadow-black z-10 flex flex-col justify-start items-left gap-5 p-10">
+    <section className="absolute text-black bg-white top-52 left-5 w-[95%] max-w-screen-lg rounded shadow-2xl shadow-black z-10 flex flex-col justify-start items-left gap-5 p-10">
       <h2 className="text-3xl font-bold">
         Settle Debt with {selectedFriend?.name}?
       </h2>
